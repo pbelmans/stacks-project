@@ -17,7 +17,6 @@ jobs:
           pip install git+https://github.com/gerby-project/plastex.git
       - name: Prepare the TeX files
         run: |
-          apk add make
           make web
       - name: Run Gerby
         run: |
