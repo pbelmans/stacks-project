@@ -248,7 +248,7 @@ install:
 	@echo "% Be sure to change INSTALLDIR value in the Makefile! %"
 	@echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 
-WEBDIR=../WEB
+WEBDIR=WEB
 .PHONY: web
 web: tmp/index.tex
 	@echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
