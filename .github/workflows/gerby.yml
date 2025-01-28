@@ -12,17 +12,15 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      - name: Install Gerby
-        run: |
-          pip install git+https://github.com/gerby-project/plastex.git
       - name: Prepare the TeX files
         run: |
           mkdir gerby
           make gerby
       - name: Run Gerby
-        uses: xu-cheng/texlive-action/full@v1
+        uses: xu-cheng/texlive-action/small@v1
         with:
           run: |
+            pip install git+https://github.com/gerby-project/plastex.git
             cd gerby
             plastex --renderer=Gerby book.tex
 
