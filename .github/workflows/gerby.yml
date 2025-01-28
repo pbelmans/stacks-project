@@ -20,6 +20,7 @@ jobs:
           mkdir gerby
           make gerby
       - name: Run Gerby
+        uses: xu-cheng/texlive-action/full@v1
         run: |
           cd gerby
           plastex --renderer=Gerby book.tex
